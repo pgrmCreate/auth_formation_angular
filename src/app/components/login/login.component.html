@@ -1,0 +1,16 @@
+<div>
+    <form class="d-flex" (ngSubmit)="tryLog()" *ngIf="!isLogged()">
+        <input class="form-control mx-2" type="text" placeholder="login" [(ngModel)]="inputLogging"
+               [ngModelOptions]="{standalone: true}"/>
+        <input class="form-control" type="text" placeholder="mot de passe" [(ngModel)]="inputPassword"
+               [ngModelOptions]="{standalone: true}"/>
+
+        <button class="btn btn-sm btn-success form-control mx-2">Login</button>
+    </form>
+
+    <div *ngIf="isLogged()">
+        <p class="m-0">
+            {{ getUser().name }}
+        </p>
+    </div>
+</div>

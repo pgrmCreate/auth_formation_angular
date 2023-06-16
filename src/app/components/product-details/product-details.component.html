@@ -1,0 +1,25 @@
+<div class="container">
+    <div class="row my-5">
+        <div class="col-10 offset-1" *ngIf="targetProduct">
+            <h1>{{ targetProduct.name }}</h1>
+
+            <p class="alert alert-primary my-3">{{ targetProduct.body }}</p>
+
+            <button class="btn btn-primary mx-3"
+                    [routerLink]="[{ outlets: { auxproduct: ['avis'] } }]">
+                Voir les avis
+            </button>
+
+            <button class="btn btn-primary"
+                    [routerLink]="[{ outlets: { auxproduct: ['tech'] } }]">
+                Voir la fiche technique
+            </button>
+        </div>
+
+        <div class="col-10 offset-1 my-5">
+            <h2>Plus d'infos</h2>
+
+            <router-outlet name="auxproduct"/>
+        </div>
+    </div>
+</div>

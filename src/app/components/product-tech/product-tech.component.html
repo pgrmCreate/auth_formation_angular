@@ -1,0 +1,9 @@
+<div>
+    <div *ngIf="targetProduct">
+        <ul>
+            <li *ngFor="let techElement of targetProduct.tech">
+                {{ techElement }}
+            </li>
+        </ul>
+    </div>
+</div>

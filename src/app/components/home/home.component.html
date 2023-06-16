@@ -1,0 +1,11 @@
+<div class="container">
+    <div class="row">
+        <div class="col-2" *ngFor="let product of getProducts()">
+            <div class="product-container">
+                {{ product.name }}
+            </div>
+
+            <button class="btn btn-sm btn-primary" [routerLink]="['product', product.id]">Voir plus</button>
+        </div>
+    </div>
+</div>
